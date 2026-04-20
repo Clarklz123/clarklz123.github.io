@@ -12,6 +12,11 @@ body {
   line-height: 1.6;
   color: #1f2937;
   background-color: #ffffff;
+  padding-top: 84px;
+}
+
+body.home-page {
+  padding-top: 0;
 }
 
 .container {
@@ -108,8 +113,19 @@ body {
    3. NAVBAR
 ========================= */
 .navbar {
-  background-color: #1d4ed8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0);
   padding: 18px 0;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 .nav-wrapper {
@@ -119,14 +135,14 @@ body {
 }
 
 .logo {
-  color: #ffffff;
+  color: #111827;
   font-size: 28px;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
 .nav-menu a {
-  color: #ffffff;
+  color: #111827;
   text-decoration: none;
   margin-left: 28px;
   font-size: 16px;
@@ -161,7 +177,7 @@ body {
 ========================= */
 .hero {
   background: linear-gradient(135deg, #eff6ff, #ffffff);
-  padding: 100px 0;
+  padding: 180px 0 100px;
 }
 
 .hero-content {
