@@ -172,6 +172,41 @@ body.home-page {
   color: #4b5563;
 }
 
+.breadcrumb {
+  margin: 4px 0 18px;
+}
+
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb li {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.breadcrumb li + li::before {
+  content: "/";
+  margin-right: 8px;
+  color: #9ca3af;
+}
+
+.breadcrumb a {
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #1f2937;
+  text-decoration: underline;
+}
+
 /* =========================
    5. HOME PAGE
 ========================= */
