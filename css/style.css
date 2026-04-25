@@ -157,7 +157,7 @@ body.home-page {
 ========================= */
 .page-hero {
   background: linear-gradient(135deg, #eff6ff, #ffffff);
-  padding: 80px 0 60px;
+  padding: 0 0 60px;
 }
 
 .page-hero h1 {
@@ -170,6 +170,121 @@ body.home-page {
   max-width: 780px;
   font-size: 18px;
   color: #4b5563;
+}
+
+.breadcrumb-strip {
+  background-color: #f3f4f6;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 80px;
+}
+
+.breadcrumb-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  min-height: 92px;
+}
+
+.breadcrumb-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #dc2626;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.breadcrumb-back:hover {
+  color: #b91c1c;
+}
+
+.back-icon {
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #dc2626;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.breadcrumb {
+  font-size: 16px;
+}
+
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb li {
+  color: #4b5563;
+}
+
+.breadcrumb li + li::before {
+  content: ">";
+  margin: 0 4px;
+  color: #9ca3af;
+}
+
+.breadcrumb a {
+  color: #374151;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #111827;
+  text-decoration: underline;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background-color: #1d4ed8;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 900;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background-color: #1e40af;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-row {
+    min-height: 74px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 12px 0;
+  }
 }
 
 /* =========================
